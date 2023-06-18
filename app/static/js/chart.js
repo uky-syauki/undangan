@@ -13,6 +13,17 @@ labelColor = config.colors.textMuted;
 legendColor = config.colors.bodyColor;
 borderColor = config.colors.borderColor;
 cyanColor = "rgb(0,188,227)";
+
+let max = (arr) => {
+  n = 0;
+  for (let i = 0; i < arr.length; i++){
+      if (n < arr[i]){
+          n = arr[i];
+      }
+  }
+  return n;
+};
+let besar = max(yVal)
 //   }
   const barChart = document.getElementById('barChart');
   if (barChart) {
@@ -37,7 +48,7 @@ cyanColor = "rgb(0,188,227)";
         responsive: true,
         maintainAspectRatio: false,
         animation: {
-          duration: 500
+          duration: (besar+besar) //500
         },
         plugins: {
           tooltip: {
