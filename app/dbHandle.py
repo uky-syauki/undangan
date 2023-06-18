@@ -125,6 +125,8 @@ class DataBase(TabelBarang, TabelTerjual):
         TabelBarang.__init__(self)
         TabelTerjual.__init__(self)
         self.union, self.totalTransaksi, self.totalPenjualan, self.totalModal, self.keuntungan = self.relasi()
+        self.forStatYearKey = []
+        self.forStatYearValue = []
 
     def relasi(self):
         totalTransaksi = 0
