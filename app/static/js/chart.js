@@ -12,7 +12,7 @@ headingColor = config.colors.headingColor;
 labelColor = config.colors.textMuted;
 legendColor = config.colors.bodyColor;
 borderColor = config.colors.borderColor;
-cyanColor = "rgb(0,100,100)";
+cyanColor = "rgb(0,188,227)";
 //   }
   const barChart = document.getElementById('barChart');
   if (barChart) {
