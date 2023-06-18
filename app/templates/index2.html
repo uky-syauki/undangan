@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>Charts - ChartJS | Sneat - Bootstrap 5 HTML Admin Template - Pro </title>
+
+    <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!">
+    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
+
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/">
+
+    
+    <!-- ? PROD Only:Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
+    <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-3067524.js?sv=7"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5DDHKGP"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5DDHKGP');</script>
+    <!-- End Google Tag Manager -->
+    
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico"> -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/boxicons.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/fontawesome.css')}}">
+
+    <!-- Core CSS -->
+    <!-- <link rel="stylesheet" href="assets/vendor/css/core.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="stylesheet" href="assets/css/docs.css"> -->
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='vendor')}}">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="stylesheet" href="assets/css/docs.css"> -->
+
+    <!-- Vendors CSS -->
+    <!-- <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendor/libs/highlight/highlight.css"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/highlight/highlight.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    
+
+    <!-- Page CSS -->
+    
+
+    <!-- Core JS -->
+    <script src="{{ url_for('static', filename='vendor/js/helpers.js') }}"></script>
+    <style type="text/css">
+.layout-menu-fixed .layout-navbar-full .layout-menu,
+.layout-menu-fixed-offcanvas .layout-navbar-full .layout-menu {
+  top: 0px !important;
+}
+.layout-page {
+  padding-top: 0px !important;
+}
+.content-wrapper {
+  padding-bottom: 0px !important;
+}</style>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: Don't remove unless you are aware of it, To hide customizer set displayCustomizer value false in config.js.  -->
+    <!-- <script src="assets/vendor/js/template-customizer.js"></script> -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <!-- <script src="assets/js/config.js"></script> -->
+
+    <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+
+  <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" async="" data-user="252882" data-account="269977"></script><link rel="stylesheet" href="https://a.omappapi.com/app/js/api.min.css" id="omapi-css" media="all"><script async="" src="https://script.hotjar.com/modules.d300ab0f8311d57bf5d6.js" charset="utf-8"></script><script src="https://a.omappapi.com/app/js/webfont/1.5.18/webfont.js" async=""></script></head>
+    <h1>Hello Dunia!!</h1>
+    <div class="card">
+        <div class="card-header header-elements p-3 my-n1">
+          <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
+          <div class="card-action-element ms-auto py-0">
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-calendar"></i></button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a></li>
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a></li>
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 7 Days</a></li>
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 30 Days</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Current Month</a></li>
+                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <canvas id="barChart" class="chartjs" data-height="400"></canvas>
+        </div>
+        </div>
+
+      <!-- / Layout wrapper -->
+      <!-- <script src="assets/vendor/libs/jquery/jquery.js"></script>
+      <script src="assets/vendor/libs/highlight/highlight.js"></script><script type="text/javascript" id="">console.log("TS:GTM Worked!");</script>
+  <script type="text/javascript" id="">(function(b,c,d){var a=b.createElement("script");a.type="text/javascript";a.src="https://a.omappapi.com/app/js/api.min.js";a.async=!0;a.dataset.user=c;a.dataset.account=d;b.getElementsByTagName("head")[0].appendChild(a)})(document,252882,269977);</script>
+  
+      <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+      
+      <script src="assets/vendor/libs/popper/popper.js"></script>
+      <script src="assets/vendor/js/bootstrap.js"></script>
+      <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+      <script src="assets/vendor/libs/hammer/hammer.js"></script>
+      <script src="assets/vendor/js/menu.js"></script> -->
+      <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> -->
+      <!-- Vendors JS -->
+      <!-- <script src="assets/vendor/libs/chartjs/chartjs.js"></script> -->
+
+      <script src="{{ url_for('static', filename='vendor/libs/chartjs/chartjs.js') }}"></script>
+  
+      <!-- Page JS -->
+      <!-- <script src="assets/js/docs.js"></script>
+      <script src="assets/js/charts-chartjs.js"></script> -->
+
+      <script src="{{ url_for('static', filename='js/docs.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/charts-chartjs.js') }}"></script>
+    
+  
+  
+  
+  
+  
+  <iframe id="_hjSafeContext_41837485" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="om-mmosgju0tkru8ajiwhig-holder">
+  <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+{% endblock %}
