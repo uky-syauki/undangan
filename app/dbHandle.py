@@ -1,60 +1,18 @@
-# from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime
-# from sqlalchemy.orm import sessionmaker
-# from sqlalchemy.ext.declarative import declarative_base
-# from datetime import datetime
-
-# # Membuat objek engine untuk koneksi ke database SQLite
-# engine = create_engine('sqlite:///app.db', echo=True)
-
-# # Membuat session
-# Session = sessionmaker(bind=engine)
-# session = Session()
-
-# # Membuat base class menggunakan metode declarative
-# Base = declarative_base()
-
-# class Barang(Base):
-# 	__tablename__ = 'barang'
-# 	id = Column(Integer, primary_key=True)
-# 	kode_barang = Column(String(15), unique=True)
-# 	nama_barang = Column(String(30))
-# 	harga_jual = Column(Integer)
-# 	harga_modal = Column(Integer)
-# 	tersedia = Column(Integer)
-# 	def __repr__(self):
-# 		return '<Barang {}>'.format(self.kode_barang)
-
-
-
-# class Terjual(Base):
-# 	__tablename__ = 'terjual'
-# 	id = Column(Integer, primary_key=True)
-# 	timestamp = Column(DateTime, index=True, default=datetime.now)
-# #	kode_toko = db.Column(db.String(15))
-# 	kode_barang = Column(String(15))
-# 	user_id = Column(Integer, ForeignKey('user.id'))
-# 	def __repr__(self):
-# 		return '<Terjual {}>'.format(self.kode_barang)
-
 from app.models import Barang, Terjual
 
 
 class TabelBarang:
     def __init__(self):
         self.namaTabel = "Barang"
-        # self.dataBarang, self.tersedia = self.toDict(session.query(Barang).all())
         self.dataBarang, self.tersedia = self.toDict(Barang.query.all())
     def toDict(self,data):
         hasil = {}
         tersedia = {}
         for isi in data:
             makeDict = {}
-            # makeDict["id"] = isi.id
-            # makeDict["kode_barang"] = isi.kode_barang
             makeDict["nama_barang"] = isi.nama_barang
             makeDict["harga_jual"] = isi.harga_jual
             makeDict["harga_modal"] = isi.harga_modal
-            # makeDict["tersedia"] = isi.tersedia
             tersedia[isi.kode_barang] = isi.tersedia
             hasil[isi.kode_barang] = makeDict
         tersedia = dict(sorted(tersedia.items(), key=lambda x: x[1]))
@@ -64,7 +22,6 @@ class TabelBarang:
 class TabelTerjual:
     def __init__(self):
         self.namaTabel = "Terjual"
-        # self.dataTerjual = self.extrakData(session.query(Terjual).all())
         self.dataTerjual = self.extrakData(Terjual.query.all())
     def getDataAll(self):
         return self.dataTerjual
@@ -106,8 +63,6 @@ class TabelTerjual:
                     hitungBarang[isi[2]] += 1
         hitungBarang = dict(sorted(hitungBarang.items(), key=lambda x: x[1])[::-1])
         return hasil, hitungBarang
-    # def formatDatetime(self,date):
-    #     return datetime.strptime(date,"%Y-%m-%d %H:%M:%S.%f")
     def extrakData(self,data):
         hasil = []
         for isi in data:
@@ -127,7 +82,7 @@ class DataBase(TabelBarang, TabelTerjual):
         self.union, self.totalTransaksi, self.totalPenjualan, self.totalModal, self.keuntungan = self.relasi()
         self.forStatYearKey = []
         self.forStatYearValue = []
-
+        self.data1, self.data2 = self.getAllMoon()
     def relasi(self):
         totalTransaksi = 0
         totalPenjualan = 0
@@ -145,8 +100,6 @@ class DataBase(TabelBarang, TabelTerjual):
             totalTransaksi += 1
             totalPenjualan += dariBarang["harga_jual"]
             totalModal += dariBarang["harga_modal"]
-            # for nilai in self.dataBarang[isi[2]].values():
-            #     bungkus.append(nilai)
             hasil.append(bungkus)
         keuntungan = totalPenjualan-totalModal
         return hasil, totalTransaksi, totalPenjualan, totalModal, keuntungan
