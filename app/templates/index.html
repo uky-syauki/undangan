@@ -2,31 +2,48 @@
 
 {% block content %}
 <script src="{{ url_for('static', filename='js/config.js') }}"></script>
-    <h1>Hello Dunia!!</h1>
-    <div class="card">
-        <div class="card-header header-elements p-3 my-n1">
-          <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
-          <div class="card-action-element ms-auto py-0">
-            <div class="dropdown">
-              <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-calendar"></i></button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a></li>
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a></li>
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 7 Days</a></li>
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 30 Days</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Current Month</a></li>
-                <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a></li>
-              </ul>
-            </div>
+<!-- <h1>Hello Dunia!!</h1> -->
+<div class="card">
+  <div class="card-header header-elements p-3 my-n1">
+    <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
+    <div class="card-action-element ms-auto py-0">
+      <!-- <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-expanded="false"><i
+            class="bx bx-calendar"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a></li>
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a></li>
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 7 Days</a></li>
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 30 Days</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Current Month</a></li>
+          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a></li>
+        </ul>
+      </div> -->
+      <section class="w-100 p-4 d-flex justify-content-center pb-4">
+        <div class="form-outline datepicker" style="width: 22rem;">
+          <input type="text" class="form-control form-icon-trailing" id="exampleDatepicker1">
+          <label for="exampleDatepicker1" class="form-label" style="margin-left: 0px;">Select a date</label>
+          <div class="form-notch">
+            <div class="form-notch-leading" style="width: 9px;"></div>
+            <div class="form-notch-middle" style="width: 82.4px;"></div>
+            <div class="form-notch-trailing"></div>
           </div>
+          <button id="datepicker-toggle-66249" type="button" class="datepicker-toggle-button"
+            data-mdb-toggle="datepicker">
+            <i class="far fa-calendar datepicker-toggle-icon"></i>
+          </button>
         </div>
-        <div class="card-body">
-          <canvas id="barChart" class="chartjs" data-height="400"></canvas>
-        </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+      </section>
+      <!-- End sesi input date -->
+    </div>
+  </div>
+  <div class="card-body">
+    <canvas id="barChart" class="chartjs" data-height="400"></canvas>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
 {% endblock %}

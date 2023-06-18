@@ -1,9 +1,14 @@
 from flask import render_template, url_for
 from app import app
+from app.form import formDate
 
 @app.route('/')
 @app.route('/index')
 def index():
+	form = formDate()
+	if form.validate_on_submit():
+		pilihan = form.date.data
+		
 	return render_template("index.html", title="Home", user="Ahmad Syauki")
 
 

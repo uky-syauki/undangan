@@ -65,7 +65,7 @@ class TabelTerjual:
     def __init__(self):
         self.namaTabel = "Terjual"
         # self.dataTerjual = self.extrakData(session.query(Terjual).all())
-        self.dataTerjual = self.extrakData(Terjual.query,all())
+        self.dataTerjual = self.extrakData(Terjual.query.all())
     def getDataAll(self):
         return self.dataTerjual
     def getDataFilter(self,field):
