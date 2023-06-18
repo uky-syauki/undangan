@@ -48,7 +48,7 @@ let besar = max(yVal)
         responsive: true,
         maintainAspectRatio: false,
         animation: {
-          duration: (besar+besar) //500
+          duration: 500
         },
         plugins: {
           tooltip: {
@@ -76,14 +76,14 @@ let besar = max(yVal)
           },
           y: {
             min: 0,
-            max: 400,
+            max: (besar+besar), // 400,
             grid: {
               color: borderColor,
               drawBorder: false,
               borderColor: borderColor
             },
             ticks: {
-              stepSize: 100,
+              stepSize: 10,
               color: labelColor
             }
           }
