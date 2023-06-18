@@ -1,15 +1,14 @@
 from flask import render_template, url_for
 from app import app
 from app.form import formDate
-from app.dbHandle import DataBase
+from app import DataBase
 
-DB = DataBase()
 
 @app.route('/')
 @app.route('/index')
 def index():
-	x = DB.forStatYearKey
-	y = DB.forStatYearValue
+	x = DataBase.forStatYearKey
+	y = DataBase.forStatYearValue
 	form = formDate()
 	if form.validate_on_submit():
 		pilihan = form.date.data
