@@ -12,7 +12,7 @@ headingColor = config.colors.headingColor;
 labelColor = config.colors.textMuted;
 legendColor = config.colors.bodyColor;
 borderColor = config.colors.borderColor;
-cyanColor = "rgb(0,100,100)"
+cyanColor = "rgb(0,100,100)";
 //   }
   const barChart = document.getElementById('barChart');
   if (barChart) {
@@ -55,7 +55,7 @@ cyanColor = "rgb(0,100,100)"
         },
         plugins: {
           tooltip: {
-            rtl: isRtl,
+            rtl: true, //isRtl,
             backgroundColor: cardColor,
             titleColor: headingColor,
             bodyColor: legendColor,
