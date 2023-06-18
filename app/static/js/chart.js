@@ -7,11 +7,11 @@
 //     legendColor = config.colors_dark.bodyColor;
 //     borderColor = config.colors_dark.borderColor;
 //   } else {
-//     cardColor = config.colors.cardColor;
-//     headingColor = config.colors.headingColor;
-//     labelColor = config.colors.textMuted;
-//     legendColor = config.colors.bodyColor;
-//     borderColor = config.colors.borderColor;
+cardColor = config.colors.cardColor;
+headingColor = config.colors.headingColor;
+labelColor = config.colors.textMuted;
+legendColor = config.colors.bodyColor;
+borderColor = config.colors.borderColor;
 //   }
   const barChart = document.getElementById('barChart');
   if (barChart) {
