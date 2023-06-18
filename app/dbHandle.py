@@ -151,7 +151,7 @@ class DataBase(TabelBarang, TabelTerjual):
     def getAllMoon(self):
         hasil = {}
         hitung = {}
-        for i in range(1,33):
+        for i in range(1,13):
             if i < 10:
                 bln = f"0{i}"
             else:
@@ -159,18 +159,8 @@ class DataBase(TabelBarang, TabelTerjual):
             hasil[str(i)],hitung[str(i)] = self.getFromMoon(f"2023-{bln}")
             total = 0
             for kunci in hitung[str(i)].keys():
-                # print("kunci",kunci)
-                # print("isi kunci: ", hitung[str(i)][kunci])
                 total += hitung[str(i)][kunci]
-            # print(hitung[str(i)])
-            # total += hitung[str(i)]
+            self.forStatYearKey.append(i)
+            self.forStatYearValue.append(total)
             hitung[str(i)]["total"] = total
-        # print(f"Hitung: {hitung}")
-        # Debug
-        print("Debug")
-        for isi in hitung.keys():
-
-            print(hitung[isi])
-        
-        print("Debug selesai")
         return hasil, hitung
