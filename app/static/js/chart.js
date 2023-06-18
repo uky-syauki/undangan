@@ -19,10 +19,10 @@ cyanColor = "rgb(0,188,227)";
     const barChartVar = new Chart(barChart, {
       type: 'bar',
       data: {
-        labels: x,
+        labels: xVal,
         datasets: [
           {
-            data: y, //[275, 90, 190, 205, 125, 85, 55, 87, 127, 150, 230, 280, 190],
+            data: yVal, //[275, 90, 190, 205, 125, 85, 55, 87, 127, 150, 230, 280, 190],
             backgroundColor: cyanColor,
             borderColor: 'transparent',
             maxBarThickness: 15,
