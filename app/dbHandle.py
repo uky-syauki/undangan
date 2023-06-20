@@ -59,7 +59,7 @@ class DataBase(TabelBarang, TabelTerjual):
         y = []
         for i in range(1,33):
             y.append(self.cariUntukHari(date[0]+"-"+date[1]+"-"+str(i)))
-        return self.tanggal, y
+        return y
     def cariUntukTahun(self,date):
         # x, y = cariUntukHari('2023')
         date = date.split("-")
@@ -69,6 +69,5 @@ class DataBase(TabelBarang, TabelTerjual):
                 bulan = "0"+str(i)
             else:
                 bulan = str(i)
-            x,y = self.cariUntukBulan(date[0]+"-"+bulan)
-            y.append(sum(y))
-        return self.bulan, y
+            y.append(sum(self.cariUntukBulan(date[0]+"-"+bulan)))
+        return y
