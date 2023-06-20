@@ -27,16 +27,16 @@
             {{ form.radioTahun(class="form-check-input", name="gridRadios", checked="") }}
             <!-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked=""> -->
             <label class="form-check-label" for="gridRadios1">
-              Tahun
+              {{ form.radioTahun.label(class="form-check-label", for="gridRadios1")}}
             </label>
           </div>
-          <div class="col-sm-2">
+          <!-- <div class="col-sm-2">
             {{ form.radioBulan(class="form-check-input", name="gridRadios") }}
-            <!-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"> -->
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"> --
 
             <label class="form-check-label" for="gridRadios2">
               Bulan
-            </label>
+            </label> -->
 
 
           </div>

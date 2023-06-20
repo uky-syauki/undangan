@@ -4,7 +4,6 @@ from wtforms.validators import InputRequired
 
 class formDate(FlaskForm):
     date = DateField('Tanggal', validators=[InputRequired()], format="%Y-%m-%d")
-    radioTahun = RadioField("Berdasarkan",choices=[(True,'Tahun')])
-    radioBulan = RadioField("Berdasarkan",choices=[(True,"Bulan")])
+    radioTahun = RadioField("Berdasarkan",choices=[('tahun','Tahun'),('bulan',"Bulan")])
     submit = SubmitField("Tampilkan")
     

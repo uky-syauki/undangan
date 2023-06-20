@@ -11,11 +11,11 @@ def index():
 	y = allData.cariUntukTahun("2023")
 	form = formDate()
 	if form.validate_on_submit():
-		if form.radioTahun.data == True:
+		if form.radioTahun.data == 'tahun':
 			tahun = form.date.data.split('-')
 			x = allData.bulan
 			y = allData.cariUntukTahun(tahun[0])
-		if form.radioBulan.data == True:
+		else:
 			bulan = form.date.data.split('-')
 			x = allData.tanggal
 			y = allData.cariUntukBulan(bulan[0]+"-"+bulan[1])
