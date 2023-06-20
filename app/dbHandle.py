@@ -47,7 +47,7 @@ class DataBase(TabelBarang, TabelTerjual):
         self.bulan = list(range(1,13))
     def cariUntukHari(self,date):
         # date = "2023-04-24"
-        data = DB.dataTerjual
+        data = self.dataTerjual
         hasil = 0
         for isi in data:
             # Date = isi[1].split('-')
