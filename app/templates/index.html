@@ -7,31 +7,32 @@
   <div class="card-header header-elements p-3 my-n1">
     <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
     <div class="card-action-element ms-auto py-0">
-      <form>
+      <form action="" method="post">
+        {{ form.hiddent_tag() }}
         <div class="row mb-3">
           <div class="col-md-2" style="margin:0px;">
-            <button type="submit" class="btn btn-primary">Tampilkan</button>
+            {{ form.submit(class="btn btn-primary") }}
+            <!-- <button type="submit" class="btn btn-primary">Tampilkan</button> -->
           </div>
           <label for="inputEmail3" class="col-sm-1 col-form-label">Tanggal</label>
           <div class="col-sm-2">
-            <input type="email" class="form-control" id="inputEmail3">
+            {{ form.date(class="form-control", id="inputEmail3") }}
+            <!-- <input type="email" class="form-control" id="inputEmail3"> -->
           </div>
           <!-- </div>
         <fieldset class="row mb-3"> -->
           <legend class="col-form-label col-sm-1 pt-0">pilihan</legend>
 
           <div class="col-sm-1">
-
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked="">
+            {{ form.radioTahun(class="form-check-input", name="gridRadios" checked="") }}
+            <!-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked=""> -->
             <label class="form-check-label" for="gridRadios1">
               Tahun
             </label>
           </div>
           <div class="col-sm-2">
-
-
-
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            {{ form.radioBulan(class="form-check-input", name="gridRadios") }}
+            <!-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"> -->
 
             <label class="form-check-label" for="gridRadios2">
               Bulan
