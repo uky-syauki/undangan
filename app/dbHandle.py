@@ -3,7 +3,7 @@ from app.models import Barang, Terjual
 class TabelBarang:
     def __init__(self):
         self.namaTabel = "Barang"
-        self.dataBarang = self.extrakData(Barang.query.all())
+        self.dataBarang = self.extrakDataBarang(Barang.query.all())
     def extrakDataBarang(self,data):
         hasil = []
         for isi in data:
