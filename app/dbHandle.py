@@ -69,5 +69,6 @@ class DataBase(TabelBarang, TabelTerjual):
                 bulan = "0"+str(i)
             else:
                 bulan = str(i)
-            y.append(sum(self.cariUntukBulan(str(date[0])+"-"+str(bulan))))
+            x,y = self.cariUntukBulan(date[0]+"-"+bulan)
+            y.append(sum(y))
         return self.bulan, y
