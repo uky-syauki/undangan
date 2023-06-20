@@ -7,22 +7,42 @@
   <div class="card-header header-elements p-3 my-n1">
     <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
     <div class="card-action-element ms-auto py-0">
-
-         <div class="form-group">
-          <label>Tgl Akhir</label>
-          <div class="input-group date">
-           <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-              </div>
-              <input placeholder="masukkan tanggal Akhir" type="text" class="form-control datepicker" name="tgl_akhir">
+      <form>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3">
           </div>
-         </div>
-      <!-- End sesi input date -->
+        <!-- </div>
+        <fieldset class="row mb-3"> -->
+          <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                First radio
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Second radio
+              </label>
+            </div>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+
+
     </div>
+    <!-- End sesi input date -->
   </div>
-  <div class="card-body">
-    <canvas id="barChart" class="chartjs" data-height="400"></canvas>
-  </div>
+</div>
+<div class="card-body">
+  <canvas id="barChart" class="chartjs" data-height="400"></canvas>
+</div>
 </div>
 <script>
   let xVal = {{ x }};
