@@ -7,72 +7,7 @@
   <div class="card-header header-elements p-3 my-n1">
     <h5 class="card-title mb-0 pl-0 pl-sm-2 p-2">Latest Statistics</h5>
     <div class="card-action-element ms-auto py-0">
-      <!-- <div class="dropdown">
-        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-expanded="false"><i
-            class="bx bx-calendar"></i></button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a></li>
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a></li>
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 7 Days</a></li>
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last 30 Days</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Current Month</a></li>
-          <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a></li>
-        </ul>
-      </div> -->
-      <!-- <section class="w-100 p-4 d-flex justify-content-center pb-4">
-        <div class="form-outline datepicker" style="width: 22rem;">
-          <input type="text" class="form-control form-icon-trailing" id="exampleDatepicker1">
-          <label for="exampleDatepicker1" class="form-label" style="margin-left: 0px;">Select a date</label>
-          <div class="form-notch">
-            <div class="form-notch-leading" style="width: 9px;"></div>
-            <div class="form-notch-middle" style="width: 82.4px;"></div>
-            <div class="form-notch-trailing"></div>
-          </div>
-          <button id="datepicker-toggle-66249" type="button" class="datepicker-toggle-button"
-            data-mdb-toggle="datepicker">
-            <i class="far fa-calendar datepicker-toggle-icon"></i>
-          </button>
-        </div>
-      </section> -->
-      <!-- <div class="col-lg-3">
-        <h2 class="mb-5 text-center">Calendar #4</h2>
-        <form action="#" class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="input_from">Select Date</label>
-              <input type="text" class="form-control" id="input">
-            </div>
-          </div>
-        </form>
-      </div> -->
-      <!-- <section class="w-100 p-4 d-flex justify-content-center pb-4">
-        <div class="form-outline datepicker" style="width: 22rem;">
-          <input type="text" class="form-control form-icon-trailing" id="exampleDatepicker1">
-          <label for="exampleDatepicker1" class="form-label" style="margin-left: 0px;">Select a date</label>
-        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 81.6px;"></div><div class="form-notch-trailing"></div></div>
-      <button id="datepicker-toggle-660002" type="button" class="datepicker-toggle-button" data-mdb-toggle="datepicker">
-        <i class="far fa-calendar datepicker-toggle-icon"></i>
-      </button>
-    </div>
-      </section> -->
-      <!-- <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
-        <input class="span2" size="16" type="text" value="12-02-2013" readonly><span class="add-on"><i
-            class="icon-th"></i></span>
-      </div> -->
-      <div class="row">
-        <div class="col-lg-6">
-         <div class="form-group">
-          <label>Tgl Awal</label>
-          <div class="input-group date">
-           <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-              </div>
-              <input placeholder="masukkan tanggal Awal" type="text" class="form-control datepicker" name="tgl_awal">
-          </div>
-         </div>
+
          <div class="form-group">
           <label>Tgl Akhir</label>
           <div class="input-group date">
@@ -82,8 +17,6 @@
               <input placeholder="masukkan tanggal Akhir" type="text" class="form-control datepicker" name="tgl_akhir">
           </div>
          </div>
-        </div>
-       </div>
       <!-- End sesi input date -->
     </div>
   </div>
@@ -95,16 +28,7 @@
   let xVal = {{ x }};
   let yVal = {{ y }};
 </script>
-<script src="{{ url_for('static', filename='plugin/js/bootstrap-datepicker.min.js') }}"></script>
+<!-- <script src="../static/plugin/js/bootstrap-datepicker.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
-<script type="text/javascript">
-  $(function(){
-   $(".datepicker").datepicker({
-       format: 'yyyy-mm-dd',
-       autoclose: true,
-       todayHighlight: true,
-   });
-  });
- </script>
 {% endblock %}
