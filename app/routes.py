@@ -7,7 +7,8 @@ from app.dbHandle import DataBase
 @app.route('/index')
 def index():
 	allData = DataBase()
-	x, y = allData.cariUntukTahun("2023")
+	x = allData.bulan
+	y = allData.cariUntukTahun("2023")
 	form = formDate()
 	if form.validate_on_submit():
 		pilihan = form.date.data
