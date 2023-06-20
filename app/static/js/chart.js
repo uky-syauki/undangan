@@ -8,7 +8,6 @@
 //     borderColor = config.colors_dark.borderColor;
 //   } else {
 
-$('#dp3').datepicker();
 
 cardColor = config.colors.cardColor;
 headingColor = config.colors.headingColor;

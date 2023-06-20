@@ -58,10 +58,32 @@
       </button>
     </div>
       </section> -->
-      <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
+      <!-- <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
         <input class="span2" size="16" type="text" value="12-02-2013" readonly><span class="add-on"><i
             class="icon-th"></i></span>
-      </div>
+      </div> -->
+      <div class="row">
+        <div class="col-lg-6">
+         <div class="form-group">
+          <label>Tgl Awal</label>
+          <div class="input-group date">
+           <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-th"></span>
+              </div>
+              <input placeholder="masukkan tanggal Awal" type="text" class="form-control datepicker" name="tgl_awal">
+          </div>
+         </div>
+         <div class="form-group">
+          <label>Tgl Akhir</label>
+          <div class="input-group date">
+           <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-th"></span>
+              </div>
+              <input placeholder="masukkan tanggal Akhir" type="text" class="form-control datepicker" name="tgl_akhir">
+          </div>
+         </div>
+        </div>
+       </div>
       <!-- End sesi input date -->
     </div>
   </div>
@@ -75,4 +97,13 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+<script type="text/javascript">
+  $(function(){
+   $(".datepicker").datepicker({
+       format: 'yyyy-mm-dd',
+       autoclose: true,
+       todayHighlight: true,
+   });
+  });
+ </script>
 {% endblock %}
