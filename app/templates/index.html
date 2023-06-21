@@ -23,10 +23,12 @@
         <fieldset class="row mb-3"> -->
           <legend class="col-form-label col-sm-1 pt-0">pilihan</legend>
 
-          <div class="col-sm-1">
+          <div class="col-sm-4">
             {% for subfield in form.radioTahun %}
+            <div class="form-check form-check-inline">
               {{ subfield(class="form-check-input") }}
               {{ subfield.label(class="form-check-label") }}
+            </div>
             {% endfor %}
 
               <!--  form.radioTahun.label(class="form-check-label", for="gridRadios1"} -->
