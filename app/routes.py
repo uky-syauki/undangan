@@ -16,7 +16,7 @@ def index():
 			x = allData.bulan
 			y = allData.cariUntukTahun(tahun[0])
 		else:
-			bulan = form.date.data.split('-')
+			bulan = form.date.data.strftime("%Y-%m-%d").split('-')
 			x = allData.tanggal
 			y = allData.cariUntukBulan(bulan[0]+"-"+bulan[1])
 	return render_template("index.html", title="Home", user="Ahmad Syauki",x=x,y=y,form=form)
