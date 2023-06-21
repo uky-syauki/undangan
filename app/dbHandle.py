@@ -58,7 +58,10 @@ class DataBase(TabelBarang, TabelTerjual):
         date = date.split("-")
         y = []
         for i in range(1,33):
-            y.append(self.cariUntukHari(date[0]+"-"+date[1]+"-"+str(i)))
+            if i < 10:
+                y.append(self.cariUntukHari(date[0]+"-"+date[1]+"-0"+str(i)))
+            else:
+                y.append(self.cariUntukHari(date[0]+"-"+date[1]+"-"+str(i)))
         return y
     def cariUntukTahun(self,date):
         # x, y = cariUntukHari('2023')
