@@ -3,8 +3,8 @@ from app import app
 from app.form import formDate
 from app.dbHandle import DataBase
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=["GET","POST"])
+@app.route('/index', methods=["GET","POST"])
 def index():
 	allData = DataBase()
 	x = allData.bulan
