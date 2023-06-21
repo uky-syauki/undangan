@@ -25,20 +25,11 @@
 
           <div class="col-sm-1">
             {% for subfield in form.radioTahun %}
-                {% if subfield.id.endswith('0') %}
-                  {{ subfield(class="form-check-input", name="gridRadios", id="gridRadios1", checked="") }}
-            <!-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked=""> -->
-                  {{ subfield.label(class="form-check-label", for="gridRadios1") }}
-                  <!-- <label class="form-check-label" for="gridRadios1"> -->
-                {% endif %}
-                {% if subfield.id.endswith('1') %}
-                    {{ subfield(class="form-check-input", name="gridRadios", id="gridRadios2") }}
-                    {{ subfield.label(class="form-check-label", for="gridRadios2") }}
-                {% endif %}
+              {{ subfield(class="form-check-input") }}
+              {{ subfield.label(class="form-check-label") }}
             {% endfor %}
 
               <!--  form.radioTahun.label(class="form-check-label", for="gridRadios1"} -->
-            </label>
           </div>
           <!-- <div class="col-sm-2">
              form.radioBulan(class="form-check-input", name="gridRadios") 
