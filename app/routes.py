@@ -12,7 +12,7 @@ def index():
 	form = formDate()
 	if form.validate_on_submit():
 		if form.radioTahun.data == 'tahun':
-			tahun = form.date.data.split('-')
+			tahun = form.date.data.strftime("%Y-%m-%d").split('-')
 			x = allData.bulan
 			y = allData.cariUntukTahun(tahun[0])
 		else:
