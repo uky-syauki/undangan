@@ -31,7 +31,7 @@ class buat_data:
         for i in range(jumlah):
             bulan = randint(1,12)
             tanggal = randint(1,self.jumlah_hari_pada_bulan(int(th),int(bulan)))
-            jam = randint(0,24)
+            jam = randint(0,23)
             menit = randint(0,59)
             detik = randint(0,59)
             ms = datetime.now().strftime("%f")
