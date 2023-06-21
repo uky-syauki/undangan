@@ -38,15 +38,3 @@ class buat_data:
             hasil.append(self.toDate(getRand))
         return hasil
 
-buat = buat_data()
-bulan = buat.untuk_bulan(2023,4,5)
-print("isi bualan:")
-for i in bulan:
-    print(i, end=", type: ")
-    print(type(i))
-
-tahun = buat.untuk_tahun(2020,5)
-print("\n\nisi tahun:")
-for i in tahun:
-    print(i, end=", type: ")
-    print(type(i))
